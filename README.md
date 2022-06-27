@@ -178,6 +178,7 @@ Supported keyword params for `autosuggest` call:
   * `input` The full or partial 3 word address to obtain suggestions for. At minimum this must be the first two complete words plus at least one character from the third word.
   * `language` A supported 3 word address language as an ISO 639-1 2 letter code. This setting is on by default. Use false to disable this setting and receive more suggestions in the sea.
   * `n_results` The number of AutoSuggest results to return. A maximum of 100 results can be specified, if a number greater than this is requested, this will be truncated to the maximum. The default is 3.
+  * `focus` A location, specified as a latitude,longitude used to refine the results. If specified, the results will be weighted to give preference to those near the specified location in addition to considering similarity to the suggest string. If omitted the default behaviour is to weight results for similarity to the suggest string only.
   * `n_focus_results` Specifies the number of results (must be <= n_results) within the results set which will have a focus. Defaults to n_results. This allows you to run autosuggest with a mix of focussed and unfocussed results, to give you a "blend" of the two.
   * `clip-to-country` Restricts autosuggest to only return results inside the countries specified by comma-separated list of uppercase ISO 3166-1 alpha-2 country codes (for example, to restrict to Belgium and the UK, use clip_to_country="GB,BE").
   * `clip-to-bounding-box` Restrict autosuggest results to a bounding box, specified by coordinates.
