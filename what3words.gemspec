@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^spec/})
   spec.require_paths = ['lib']
   spec.platform      = Gem::Platform::RUBY
-  spec.required_ruby_version = '~> 3.0'
+  spec.required_ruby_version = '>= 2.7'
 
   spec.add_dependency('rest-client', '>= 1.8', '< 3.0')
 
